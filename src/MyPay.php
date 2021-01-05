@@ -93,7 +93,7 @@ class MyPay
     /**
      * post请求
      */
-    public function curl_post($post, $url = 'https://my.canpoint.net/Notification/Api/api_set_notific/') 
+    public function curl_post($post, $url) 
     {
 
     $options = array(CURLOPT_RETURNTRANSFER => true, CURLOPT_HEADER => false, CURLOPT_POST => true, CURLOPT_POSTFIELDS => $post,);

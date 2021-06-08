@@ -96,14 +96,13 @@ class MyPay
     public function curl_post($post, $url="") 
     {
 
-    $options = array(CURLOPT_RETURNTRANSFER => true, CURLOPT_HEADER => false, CURLOPT_POST => true, CURLOPT_POSTFIELDS => $post,);
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt_array($ch, $options);
-    $result = curl_exec($ch);
-    curl_close($ch);
-    return $result;
+        $options = array(CURLOPT_RETURNTRANSFER => true, CURLOPT_HEADER => false, CURLOPT_POST => true, CURLOPT_POSTFIELDS => $post,);
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt_array($ch, $options);
+        $result = curl_exec($ch);
+        curl_close($ch);
+        return $result;
     }
 }
